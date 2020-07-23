@@ -7,9 +7,6 @@
 
 s = 'bverbvueueghfjeiojdfgaaeu§'
 
-count = 0
-for num_vowels in s:
-    if num_vowels == 'a' or num_vowels == 'e' or num_vowels == 'i' or num_vowels == 'o' or num_vowels == 'u':
-        count += 1
-
-print('Number of vowels:', count)
+v = 'aeiou'
+res = [l for l in s if l in v]
+print(len(res))
