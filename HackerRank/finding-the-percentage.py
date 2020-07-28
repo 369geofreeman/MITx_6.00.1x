@@ -1,11 +1,7 @@
-# import math
-# import numpy as np
-# import os
-import string
+# Finding the percentage
 
-# print(int(((2+4*6) % 4)*1+6//7+912*3*22*math.sqrt(4) +
-#           int(np.array([3])+os.system("echo 2 > /dev/null"))))
-
+# The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students.
+# Print the average of the marks array for the student name provided, showing 2 places after the decimal.
 
 student_marks = {
     'Krishna': [67, 68, 69],

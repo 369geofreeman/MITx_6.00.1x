@@ -1,6 +1,26 @@
 ######## Example code blocks ########
 
 
+# List comprehension
+
+# you can itterate through multiple list simultansiously useing list comprehension as shown below where
+# we print a list of all possible coordinates given by (z,x,y) and only return if they do not match the sum of n
+
+x = 2
+y = 2
+z = 2
+n = 2
+
+print([[i, j, k] for i in range(x+1) for j in range(y+1)
+       for k in range(z+1) if sum([i, j, k]) != n])
+
+
+# to fixed number
+
+print("{:.2f}".format(13.949999999999999))
+# returns 13.94
+
+
 ### One line itteration ###
 
 # one line if + loop
