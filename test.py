@@ -7,20 +7,28 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-s = "ABCDEFGHIJKLIMNOQRSTUVWXYZ"
-w = 4
+num = 2356
+
+print(-20-0 > 16-0)
 
 
-def wrap(s, w):
-    res = []
-    for i in range(len(s)):
-        if i % w == 0 and i > 0:
-            res.append("\n")
-        res.append(s[i])
-    return "".join(res)
 
 
-print(wrap(s, w))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # set nocompatible              " required
