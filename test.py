@@ -7,11 +7,13 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-num = 2356
-
-print(-20-0 > 16-0)
 
 
+
+
+x = 'hello'
+
+print(x.split(''))
 
 
 
