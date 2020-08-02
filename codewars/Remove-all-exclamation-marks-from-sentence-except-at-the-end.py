@@ -14,12 +14,14 @@
 
 
 def remove(s):
-    if s[-1] != '!': return s
-    index = 0
-    for i in range(len(s[::-1])):
-        if s[::-1][i] != '!': index = i+1
-    return s.replace('!', '') + ('!'*index)
-
+    ex = ''
+    for i in s[::-1]:
+        if i == '!':
+            ex += i
+        else:
+            break
+    res = s.replace('!', '')
+    return res + ex
 
 
 print(remove('!Hi!!!!!!!'))
