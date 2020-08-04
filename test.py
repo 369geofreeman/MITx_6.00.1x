@@ -7,11 +7,31 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
+import string
+
+
+lc = string.ascii_lowercase
+uc = string.ascii_uppercase
+
+test = 'hElly' # khoor
+num = 3
+
+res = ''
+for i in test:
+    if i.isupper() and i in uc:
+        pos = uc.index(i)+num
+        if pos > 26:
+            pos -=26
+        res+=uc[pos]
+    elif i.islower() and i in lc:
+        pos = lc.index(i)+num
+        if pos > 26:
+            pos -=26
+        res+=lc[pos]
+print(res)
 
 
 
-
-print([i for i in range(1000) if i == 999 ], 'is the one')
 
 
 
