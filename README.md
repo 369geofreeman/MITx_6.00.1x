@@ -11,11 +11,8 @@
 
 ## Course Certificates
 
-### MIT
 - [MIT](/Certificate/MIT-introduction-to-computer-science.pdf)
 
-### HackerRank Problem Solving
 - [HackerRank - Problem Solving](/Certificate/hackerank-problem-solving-1.png)
 
-### SoloLearn
 - [SoloLearn](/Certificate/cert-1073-8075785.pdf)
