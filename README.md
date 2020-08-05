@@ -1,4 +1,4 @@
-# MITx_6.00.1x
+# MITx_6.00.1x and Python Studies
 
 #### Submissions for Computational thinking with Python (MITx_6.00.1x)
 
@@ -9,3 +9,13 @@
 - **HackerRank challenges:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/HackerRank)
 
 
+## Course Certificates
+
+### MIT
+- [MIT](/Certificate/MIT-introduction-to-computer-science.pdf)
+
+### HackerRank Problem Solving
+- [HackerRank - Problem Solving](/Certificate/hackerank-problem-solving-1.png)
+
+### SoloLearn
+- [SoloLearn](/Certificate/cert-1073-8075785.pdf)
