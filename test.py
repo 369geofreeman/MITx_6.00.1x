@@ -10,12 +10,11 @@ import string
 
 
 
-a = '123'
-b = '123123'
-c = '123123123'
-
-
-print(c.replace('1', ''))
+x = ['hello', 55, 7.9]
+a = 6
+b=5
+c= 4
+print(+=*abc)
 
 
 

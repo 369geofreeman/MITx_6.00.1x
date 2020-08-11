@@ -24,6 +24,7 @@ print('O(n log(n)) result: ', getK(aList,2))
 
 
 # Improved the algorithm to be linear O(n)
+# Only one loop is relevant and Pythons built in method sort does the trick. Then we can use simple O(1) list indexing to find the value of index K.
 
 
 
