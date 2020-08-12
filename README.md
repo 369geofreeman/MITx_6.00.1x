@@ -6,6 +6,8 @@
 
 - **Algorithms and Data Structures using Python** [here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/runestone)
 - **Algorithms I've studied:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/algos/search)
+- **LeetCode Learn:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/leetcode)
+- **LeetCode Challenges:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/leetcode/problems)
 - **Codewars challenges:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/codewars)
 - **HackerRank challenges:** [Here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/HackerRank)
 

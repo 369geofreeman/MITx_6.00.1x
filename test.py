@@ -10,19 +10,13 @@ import string
 
 
 
-x = ['hello', 55, 7.9]
+x = [100, 55, 7.9]
 a = 6
 b=5
 c= 4
 
-x[1] = 50
 
-print(  (2*(1-1)//2))
-
-
-
-
-
+print([x[i]*2 for i in range(len(x)) if i%2==0])
 
 
 
