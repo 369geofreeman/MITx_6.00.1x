@@ -17,16 +17,24 @@
 
 def sortArrayByParity(A):
     index = 0
+    count = 0
 
-    while index<len(A):
-        if A[index] %2==0:
+    while count<len(A):
+        if A[index] %2!=0:
             A.append(A[index])
             del A[index]
         else:
             index+=1
+        count+=1
+    return A
 
 
 
 
 print(sortArrayByParity([3,1,2,4]))
 # >>> [2,4,3,1],[4,2,3,1],[2,4,1,3], or [4,2,1,3]
+
+# 285 / 285 test cases passed.
+# Status: Accepted
+# Runtime: 84 ms
+# Memory Usage: 14.2 MB
