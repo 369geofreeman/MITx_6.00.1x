@@ -10,13 +10,59 @@ import string
 
 
 
-x = [100, 55, 7.9]
-a = 6
-b=5
-c= 4
+
+class Node:
+    def __init__(self,data=None):
+        self.data = data
+        self.next = None
 
 
-print([x[i]*2 for i in range(len(x)) if i%2==0])
+class LinkedList:
+    def __init__(self):
+        self.head = Node()
+
+    def addNode(self,data):
+        newNode = Node(data)
+        currNode = self.head
+        while currNode.next != None:
+            currNode = currNode.next
+        currNode.next = newNode
+
+    def getList(self):
+        result = []
+        currNode = self.head
+        while currNode.next!=None:
+            currNode = currNode.next
+            result.append(currNode.data)
+        return result
+
+    def getNode(self,index):
+        if index<0: print('No data at index')
+        count = 0
+        currNode = self.head
+        while count != index:
+            count += 1
+            currNode = currNode.next
+        return currNode.data
+
+myList = LinkedList()
+print(myList.getList())
+myList.addNode('Hi,')
+myList.addNode('my name is')
+myList.addNode('my name is,')
+myList.addNode('slim braidy')
+print(myList.getList())
+print(myList.getNode(2))
+print(myList.getList())
+
+
+
+
+
+
+
+
+
 
 
 
