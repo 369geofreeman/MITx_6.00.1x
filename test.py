@@ -9,8 +9,6 @@ import string
 
 
 
-
-
 class Node:
     def __init__(self,data=None):
         self.data = data
@@ -21,46 +19,79 @@ class LinkedList:
     def __init__(self):
         self.head = Node()
 
-    def addNode(self,data):
-        newNode = Node(data)
-        currNode = self.head
-        while currNode.next != None:
-            currNode = currNode.next
-        currNode.next = newNode
-
-    def getList(self):
-        result = []
+    def addNode(self,node):
+        newNode = Node(node)
         currNode = self.head
         while currNode.next!=None:
             currNode = currNode.next
-            result.append(currNode.data)
-        return result
+        currNode.next = newNode
 
-    def getNode(self,index):
-        if index<0: print('No data at index')
+    def display(self):
+        currNode = self.head
+        res = []
+        while currNode.next!=None:
+            currNode = currNode.next
+            res.append(currNode.data)
+        return res
+
+    def delNode(self,index):
         count = 0
         currNode = self.head
-        while count != index:
-            count += 1
+        if index<0:
+            print('No node at index')
+            return None
+        while currNode.next!=None:
+            if count>index:
+                print('no node at index')
+                return None
+            prevNode = currNode
+            if count==index:
+                prevNode = currNode.next
+                currNode = prevNode
+            else:
+                currNode = prevNode.next
+
+    def revList(self):
+        currNode = self.head
+        prev = None
+        while currNode:
+            next = currNode.next
+            currNode.next = prev
+            prev = currNode
+            currNode = next
+        self.head = prev
+        return self.head
+
+    def getNode(self,index):
+        currNode = self.head
+        count = 0
+        if index<0:
+            print('No node at index')
+            return None
+        while count<index:
             currNode = currNode.next
+            count+=1
         return currNode.data
 
+
 myList = LinkedList()
-print(myList.getList())
-myList.addNode('Hi,')
-myList.addNode('my name is')
-myList.addNode('my name is,')
-myList.addNode('slim braidy')
-print(myList.getList())
+myList.addNode('abc')
+myList.addNode(23)
+myList.addNode('hello')
+myList.addNode([1,2,3])
+myList.addNode(369)
+
+print(myList.display())
+
+myList.delNode(2)
+
+print(myList.display())
+
 print(myList.getNode(2))
-print(myList.getList())
 
+myList.revList()
 
-
-
-
-
-
+print(myList.display())
 
 
 
