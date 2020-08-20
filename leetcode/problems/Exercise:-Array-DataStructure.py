@@ -33,7 +33,7 @@ print('Spent £{} more in Feb compared to Jan.'.format(expenses[1][1]-expenses[0
 print('Total expense for the first quarter: £{}'.format(expenses[0][1]+expenses[1][1]+expenses[2][1]))
 
 # 3. Find out if you spent exactly 2000 dollars in any month
-print('No expenses were £200')
+print('Was there a £200 expense in June? {}'.format(200 in expenses))
 
 # 4. June month just finished and your expense is 1980 dollar. Add this item to our monthly expense list
 expenses.append(['June', 1980])
