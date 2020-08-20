@@ -7,71 +7,69 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-
-
 class Node:
     def __init__(self,data=None):
         self.data = data
         self.next = None
 
-
 class LinkedList:
     def __init__(self):
         self.head = Node()
 
-    def addNode(self,node):
-        newNode = Node(node)
-        currNode = self.head
-        while currNode.next!=None:
-            currNode = currNode.next
-        currNode.next = newNode
+    def addNode(self,data):
+        curr = self.head
+        newNode = Node(data)
+        while curr.next!=None:
+            curr = curr.next
+        curr.next = newNode
 
     def display(self):
-        currNode = self.head
+        curr = self.head
         res = []
-        while currNode.next!=None:
-            currNode = currNode.next
-            res.append(currNode.data)
+        while curr.next:
+            curr = curr.next
+            res.append(curr.data)
         return res
 
     def delNode(self,index):
+        curr = self.head
         count = 0
-        currNode = self.head
-        if index<0:
-            print('No node at index')
-            return None
-        while currNode.next!=None:
-            if count>index:
-                print('no node at index')
-                return None
-            prevNode = currNode
+        while True:
+            prev = curr
+            curr = curr.next
             if count==index:
-                prevNode = currNode.next
-                currNode = prevNode
-            else:
-                currNode = prevNode.next
+                prev.next = curr.next
+                return
+            count+=1
+
+    def insertAt(self, index, node):
+        count = 0
+        newNode = Node(node)
+        curr = self.head
+        for _ in range(index - 1):
+            curr = curr.next
+        newNode.next = curr.next
+        curr.next = newNode
+
+    def getNode(self,index):
+        curr = self.head
+        count = 0
+        while count!=index:
+            curr = curr.next
+            count+=1
+        return curr.data
 
     def revList(self):
-        currNode = self.head
+        curr = self.head
         prev = None
-        while currNode:
-            next = currNode.next
-            currNode.next = prev
-            prev = currNode
-            currNode = next
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
         self.head = prev
         return self.head
 
-    def getNode(self,index):
-        currNode = self.head
-        count = 0
-        if index<0:
-            print('No node at index')
-            return None
-        while count<index:
-            currNode = currNode.next
-            count+=1
-        return currNode.data
 
 
 myList = LinkedList()
@@ -83,6 +81,7 @@ myList.addNode(369)
 
 print(myList.display())
 
+myList.insertAt(1,'BITCH')
 myList.delNode(2)
 
 print(myList.display())
