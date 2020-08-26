@@ -27,12 +27,23 @@ class Stack:
     def size(self):
         return len(self.container)
 
-reverseStack = Stack()
 
-reverseStack.push(22)
-reverseStack.push(369)
-reverseStack.push('GeoFr33man')
-reverseStack.push(333)
-reverseStack.push('Hi, how are you?')
+def reverseStr(s):
+    if not s: return None
+    stack = Stack()
+    res = ''
 
-print(reverseStack.peek())
+    [stack.push(i) for i in s]
+
+    for i in range(stack.size()):
+        res += stack.pop()
+    return res
+
+
+
+string = 'We will conquere covid-19'
+
+print(reverseStr(string))
+# >>> "91-DIVOC ereuqnoc lliw eW"
+print(reverseStr('Zero to one'))
+# >>> eno ot oreZ

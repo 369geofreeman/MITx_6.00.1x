@@ -14,7 +14,7 @@
 
 ## Course Certificates
 
-- [MIT](/Certificate/MIT-introduction-to-computer-science.pdf)
+- [MIT Computational Thinking with Python](/Certificate/MIT-introduction-to-computer-science.pdf)
 
 - [HackerRank - Problem Solving](/Certificate/hackerank-problem-solving-1.png)
 

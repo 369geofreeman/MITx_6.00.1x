@@ -1,6 +1,7 @@
 # import math
 # import numpy as np
 # import os
+import time
 from collections import deque
 import string
 
@@ -9,25 +10,9 @@ import string
 
 
 
-stack = deque()
-
-stack.append(1)
-stack.append(2)
-stack.append(3)
-stack.append(4)
-stack.append(5)
-stack.append(6)
-
-stack.pop()
-# >>> 6
-stack.pop()
-# >>> 5
-
-print(stack)
-# >>> deque([1,2,3,4])
-
-print(dir(stack))
-
+for i in range(10):
+    time.sleep(0.2)
+    print(i)
 
 
 
