@@ -1,22 +1,32 @@
 # import math
 # import numpy as np
 # import os
+from collections import deque
 import string
 
 # print(int(((2+4*6) % 4)*1+6//7+912*3*22*math.sqrt(4) +
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-x = []
-y = [9,8,7]
 
+stack = deque()
 
+stack.append(1)
+stack.append(2)
+stack.append(3)
+stack.append(4)
+stack.append(5)
+stack.append(6)
 
-for i in y:
-    i+=1
-print(y)
+stack.pop()
+# >>> 6
+stack.pop()
+# >>> 5
 
+print(stack)
+# >>> deque([1,2,3,4])
 
+print(dir(stack))
 
 
 
