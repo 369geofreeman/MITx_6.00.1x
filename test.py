@@ -7,90 +7,16 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-class Node:
-    def __init__(self,data=None):
-        self.data = data
-        self.next = None
-
-class LinkedList:
-    def __init__(self):
-        self.head = Node()
-
-    def addNode(self,data):
-        curr = self.head
-        newNode = Node(data)
-        while curr.next!=None:
-            curr = curr.next
-        curr.next = newNode
-
-    def display(self):
-        curr = self.head
-        res = []
-        while curr.next:
-            curr = curr.next
-            res.append(curr.data)
-        return res
-
-    def delNode(self,index):
-        curr = self.head
-        count = 0
-        while True:
-            prev = curr
-            curr = curr.next
-            if count==index:
-                prev.next = curr.next
-                return
-            count+=1
-
-    def insertAt(self, index, node):
-        count = 0
-        newNode = Node(node)
-        curr = self.head
-        for _ in range(index - 1):
-            curr = curr.next
-        newNode.next = curr.next
-        curr.next = newNode
-
-    def getNode(self,index):
-        curr = self.head
-        count = 0
-        while count!=index:
-            curr = curr.next
-            count+=1
-        return curr.data
-
-    def revList(self):
-        curr = self.head
-        prev = None
-        while curr:
-            next = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next
-        self.head = prev
-        return self.head
+x = []
+y = [9,8,7]
 
 
 
-myList = LinkedList()
-myList.addNode('abc')
-myList.addNode(23)
-myList.addNode('hello')
-myList.addNode([1,2,3])
-myList.addNode(369)
+for i in y:
+    i+=1
+print(y)
 
-print(myList.display())
 
-myList.insertAt(1,'BITCH')
-myList.delNode(2)
-
-print(myList.display())
-
-print(myList.getNode(2))
-
-myList.revList()
-
-print(myList.display())
 
 
 
