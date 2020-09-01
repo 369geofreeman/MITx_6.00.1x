@@ -30,7 +30,7 @@ class ListQueue:
 
 # Stack based Queue (Two stacked queue)
 
-class Queue:
+class StackQueue:
     def __init__(self):
         self.inbound_stack = []
         self.outbound_stack = []
@@ -45,7 +45,7 @@ class Queue:
             return self.outbound_stack.pop()
 
 print('--- Stack based Queue ---')
-queue = Queue()
+queue = StackQueue()
 queue.enqueue(5)
 queue.enqueue(6)
 queue.enqueue(7)
@@ -65,7 +65,7 @@ class Node:
         self.next = next
         self.prev = prev
 
-class NodeQueue:
+class Queue:
     def __init__(self):
         self.head = None
         self.tail = None
