@@ -10,12 +10,68 @@ import string
 
 
 
-for i in range(10):
-    time.sleep(0.2)
-    print(i)
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+class Linkedlist:
+    def __init__(self):
+        self.head = Node()
+
+    def listLen(self):
+        currNode = self.head
+        count = 0
+        while currNode.next:
+            currNode = currNode.next
+            count+=1
+        return count
+
+    def addNode(self, data):
+        currNode = self.head
+        newNode = Node(data)
+
+        while currNode.next:
+            currNode = currNode.next
+        currNode.next = newNode
+
+    def delNode(self,index):
+        currNode = self.head
+        if index > self.listLen() or index<0: return print('No item at that index')
+        count = 0
+
+        while currNode.next:
+            prevNode = currNode
+            currNode = currNode.next
+            if count == index:
+                prevNode.next = currNode.next
+            count+=1
+
+
+    def viewList(self):
+        currNode = self.head
+        res = []
+
+        while currNode.next:
+            currNode = currNode.next
+            res.append(currNode.data)
+        return res
 
 
 
+myList = Linkedlist()
+
+myList.addNode(1)
+myList.addNode(2)
+myList.addNode('Tesla')
+myList.addNode(4)
+myList.addNode(['is', 'king'])
+
+print(myList.viewList())
+
+myList.delNode(2)
+
+print(myList.viewList())
 
 # set nocompatible              " required
 # filetype off                  " required
