@@ -11,8 +11,8 @@
     (B)     (C)              (B)    (C) <--- Children        (B)     (C) <--- Level 2
    / |      / \                             (Desendent)      /|      / \
   / (E)    /   \                                            / |     /   \
-(D)   \   (H)   \                                         (D) (E)  (F)   \
- |    (F)  |    (I)                                                       (G) <--- Level 3
+(D)   \   (H)   \                                         (D) (E)  (F)   (G)  <--- Level 3
+ |    (F)  |    (I)                                                       
 (J)       (G) <--- Leaves   
 ```
 
