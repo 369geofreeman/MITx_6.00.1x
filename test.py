@@ -57,19 +57,50 @@ class Linkedlist:
             res.append(currNode.data)
         return res
 
+    def sorted_insert(self, data):
+        # Your code goes here.
+        # Make sure to return the head of the list.
+        newNode = Node(data)
+        currNode = self.head
+        if currNode == None: return newNode
+        if currNode.next == None:
+            if currNode.data < data:
+                currNode = currNode.next
+                currNode = newNode
+            else:
+                currNode.next = newNode
+            return self.head
+
+        if currNode.next.data > data:
+            prevNode = currNode.next
+            newNode.next = prevNode
+            currNode.next = newNode
+            return self.head
+
+        while currNode.next!=None:
+            currNode = currNode.next
+            if currNode.data < data and currNode.next == None:
+                currNode.next = newNode
+            elif currNode.data < data and currNode.next.data > data:
+                prevNode = currNode
+                newNode.next = prevNode.next
+                currNode.next = newNode
+
+        return self.head
+
 
 
 myList = Linkedlist()
 
 myList.addNode(1)
 myList.addNode(2)
-myList.addNode('Tesla')
+myList.addNode(3)
 myList.addNode(4)
-myList.addNode(['is', 'king'])
+myList.addNode(5)
 
 print(myList.viewList())
 
-myList.delNode(2)
+myList.sorted_insert(0.5)
 
 print(myList.viewList())
 

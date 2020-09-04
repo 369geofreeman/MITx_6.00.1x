@@ -4,16 +4,16 @@
 ## Terminology
 
 ```
-	(A) <---- Node
-        / \
-       /   \ <---- Edge
-      /     \
-    (B)     (C)
-   / |      / \
-  / (E)    /   \
-(D)   \   (H)   \
- |    (F)  |    (I)
-(J)       (G)    
+	(A) <---- Node          (A) <--- Root (parent)           (A) <--- Level 1
+        / \                     / \                              / \
+       /   \ <---- Edge        /   \                            /   \
+      /     \                 /     \                          /     \
+    (B)     (C)              (B)    (C) <--- Children        (B)     (C) <--- Level 2
+   / |      / \                             (Desendent)      /|      / \
+  / (E)    /   \                                            / |     /   \
+(D)   \   (H)   \                                         (D) (E)  (F)   \
+ |    (F)  |    (I)                                                       (G) <--- Level 3
+(J)       (G) <--- Leaves   
 ```
 
 
