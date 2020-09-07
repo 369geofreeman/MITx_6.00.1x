@@ -9,100 +9,49 @@ import string
 #           int(np.array([3])+os.system("echo 2 > /dev/null"))))
 
 
-
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
-
-class Linkedlist:
-    def __init__(self):
-        self.head = Node()
-
-    def listLen(self):
-        currNode = self.head
-        count = 0
-        while currNode.next:
-            currNode = currNode.next
-            count+=1
-        return count
-
-    def addNode(self, data):
-        currNode = self.head
-        newNode = Node(data)
-
-        while currNode.next:
-            currNode = currNode.next
-        currNode.next = newNode
-
-    def delNode(self,index):
-        currNode = self.head
-        if index > self.listLen() or index<0: return print('No item at that index')
-        count = 0
-
-        while currNode.next:
-            prevNode = currNode
-            currNode = currNode.next
-            if count == index:
-                prevNode.next = currNode.next
-            count+=1
+def sumUp(n):
+    if n == 1:
+        return 1
+    else:
+        return n + sumUp(n-1)
 
 
-    def viewList(self):
-        currNode = self.head
-        res = []
-
-        while currNode.next:
-            currNode = currNode.next
-            res.append(currNode.data)
-        return res
-
-    def sorted_insert(self, data):
-        # Your code goes here.
-        # Make sure to return the head of the list.
-        newNode = Node(data)
-        currNode = self.head
-        if currNode == None: return newNode
-        if currNode.next == None:
-            if currNode.data < data:
-                currNode = currNode.next
-                currNode = newNode
-            else:
-                currNode.next = newNode
-            return self.head
-
-        if currNode.next.data > data:
-            prevNode = currNode.next
-            newNode.next = prevNode
-            currNode.next = newNode
-            return self.head
-
-        while currNode.next!=None:
-            currNode = currNode.next
-            if currNode.data < data and currNode.next == None:
-                currNode.next = newNode
-            elif currNode.data < data and currNode.next.data > data:
-                prevNode = currNode
-                newNode.next = prevNode.next
-                currNode.next = newNode
-
-        return self.head
+print(sumUp(5))
+for i in range(10, 5, -1):
+    print(i)
 
 
 
-myList = Linkedlist()
 
-myList.addNode(1)
-myList.addNode(2)
-myList.addNode(3)
-myList.addNode(4)
-myList.addNode(5)
 
-print(myList.viewList())
 
-myList.sorted_insert(0.5)
 
-print(myList.viewList())
+
+
+
+
+
+
+
+# myList = Linkedlist()
+#  
+# myList.addNode(1)
+# myList.addNode(2)
+# myList.addNode(3)
+# myList.addNode(4)
+# myList.addNode(5)
+
+# print(myList.viewList())
+# 
+# myList.sorted_insert(0.5)
+# 
+# print(myList.viewList())
+
+
+
+
+
+
 
 # set nocompatible              " required
 # filetype off                  " required
