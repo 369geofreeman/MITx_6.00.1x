@@ -10,15 +10,15 @@ import string
 
 
 def sumUp(n):
-    if n == 1:
-        return 1
-    else:
-        return n + sumUp(n-1)
+    if n == []:
+        x = sum([i for i in n])
+        return n
+    if isinstance(n[0], list):
+        return sumUp(n[0]) + sumUp(n[1:])
+    return n[:1] + sumUp(n[1:])
 
 
-print(sumUp(5))
-for i in range(10, 5, -1):
-    print(i)
+print(sumUp([1,2,3,[3,4,5,[6,6,6,[9,9,9]], [7,5,4]]]))
 
 
 
