@@ -14,6 +14,8 @@
 
 ## Course Certificates
 
+- [Machine Learning with Python-From Linear Models to Deep Learning](/Certificate/MITx6.86x_Certificate_edX.pdf) 
+
 - [MIT Computational Thinking with Python](/Certificate/MIT-introduction-to-computer-science.pdf)
 
 - [HackerRank - Problem Solving](/Certificate/hackerank-problem-solving-1.png)
