@@ -3,7 +3,7 @@
 
 ### problems
 
-A full list of completed probles can be found [here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/leetcode/problems)
+A full list of completed problems can be found [here](https://github.com/369geofreeman/MITx_6.00.1x/tree/master/leetcode/problems)
 
 
 ### Cards
